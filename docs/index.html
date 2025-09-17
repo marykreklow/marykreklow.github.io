@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,10 +34,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c7545c4d855a6c3df61a1f532d10251f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -131,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">SDS 341</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Econ200.html"> 
+    <a class="nav-link" href="./Econ200.qmd"> 
 <span class="menu-text">Econ 200</span></a>
   </li>  
 </ul>
@@ -191,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="mary-kreklow" class="level2">
 <h2 data-anchor-id="mary-kreklow">Mary Kreklow</h2>
 <p><em>Welcome!</em></p>
-<p>I’m Mary Kreklow, a junior at St.&nbsp;Olaf College, studying quantitative economics with concentrations in statistics &amp; data science and international relations. My academic journey is driven by a commitment to understanding complex systems—whether that’s through data analysis, policy evaluation, or modeling solutions for real-world issues. Outside the classroom, I lead as a SOAR Peer Leader and Senior Admissions Fellow, and I’m actively involved in music ensembles and campus organizations. With a passion for helping others and finding good in the world, I’m excited to work on projects that reflect my dedication to bridging gaps and uplifting communities.</p>
+<p>I’m Mary Kreklow, a senior at St.&nbsp;Olaf College, studying quantitative economics with concentrations in statistics &amp; data science and international relations. My academic journey is driven by a commitment to understanding complex systems - whether that’s through data analysis, policy evaluation, or modeling solutions for real-world issues. Outside the classroom, I lead as a SOAR Peer Leader and Senior Admissions Fellow, and I’m actively involved in music ensembles and campus organizations. With a passion for helping others and finding good in the world, I’m excited to work on projects that reflect my dedication to bridging gaps and uplifting communities.</p>
 <p>Here, you’ll find a collection of projects that showcase my curiosity and creativity, offering a playful take on data-driven insights!</p>
 </section>
 </div></div>
@@ -200,7 +200,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="get-in-touch" class="level3">
 <h3 data-anchor-id="get-in-touch">Get in Touch</h3>
 <p><strong>Email</strong>: <a href="mailto:kreklo1@stolaf.edu">kreklo1@stolaf.edu</a></p>
-<p><strong>Residence Hall</strong>: Thorson Hall</p>
 <p><strong>Hometown</strong>: Tigerton, WI</p>
 <p><strong>Phone</strong>: 715-250-3816</p>
 
@@ -284,8 +283,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -396,7 +393,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

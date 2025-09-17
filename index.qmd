@@ -20,7 +20,7 @@ about:
 
 *Welcome!*
 
-I'm Mary Kreklow, a junior at St. Olaf College, studying quantitative economics with concentrations in statistics & data science and international relations. My academic journey is driven by a commitment to understanding complex systems—whether that’s through data analysis, policy evaluation, or modeling solutions for real-world issues. Outside the classroom, I lead as a SOAR Peer Leader and Senior Admissions Fellow, and I’m actively involved in music ensembles and campus organizations. With a passion for helping others and finding good in the world, I’m excited to work on projects that reflect my dedication to bridging gaps and uplifting communities.
+I'm Mary Kreklow, a senior at St. Olaf College, studying quantitative economics with concentrations in statistics & data science and international relations. My academic journey is driven by a commitment to understanding complex systems - whether that’s through data analysis, policy evaluation, or modeling solutions for real-world issues. Outside the classroom, I lead as a SOAR Peer Leader and Senior Admissions Fellow, and I’m actively involved in music ensembles and campus organizations. With a passion for helping others and finding good in the world, I’m excited to work on projects that reflect my dedication to bridging gaps and uplifting communities.
 
 Here, you’ll find a collection of projects that showcase my curiosity and creativity, offering a playful take on data-driven insights!
 :::
@@ -28,8 +28,6 @@ Here, you’ll find a collection of projects that showcase my curiosity and crea
 ### Get in Touch
 
 **Email**: <a href='mailto:kreklo1@stolaf.edu'>kreklo1\@stolaf.edu</a>
-
-**Residence Hall**: Thorson Hall
 
 **Hometown**: Tigerton, WI
 
