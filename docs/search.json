@@ -18,14 +18,14 @@
     "href": "index.html",
     "title": "Mary Kreklow",
     "section": "",
-    "text": "Welcome!\nI’m Mary Kreklow, a recent graduate of St. Olaf College with a B.A. in quantitative economics and concentrations in statistics & data science and international relations. I have been captivated by the world of statistics, particularly how we can use data to improve the lives of the communities around us.\nThis website began as a project for my Data Science II class as a way to showcase some of the fun projects I was working on. Since then, it has grown as I’ve continued learning new statistical and data visualization techniques. Enjoy a glimpse into some of the data driven questions I’ve been able to explore!"
+    "text": "Welcome!\nI’m Mary Kreklow, a recent graduate of St. Olaf College with a B.A. in quantitative economics and concentrations in statistics & data science and international relations. I have been captivated by the world of statistics, particularly how we can use data to improve the lives of the communities around us.\nThis website began as a project for my Data Science II class as a way to showcase some of the fun projects I was working on. Since then, it has grown as I’ve continued learning new statistical and data visualization techniques. Enjoy a glimpse into some of the data-driven questions I’ve been able to explore!"
   },
   {
     "objectID": "index.html#mary-kreklow",
     "href": "index.html#mary-kreklow",
     "title": "Mary Kreklow",
     "section": "",
-    "text": "Welcome!\nI’m Mary Kreklow, a recent graduate of St. Olaf College with a B.A. in quantitative economics and concentrations in statistics & data science and international relations. I have been captivated by the world of statistics, particularly how we can use data to improve the lives of the communities around us.\nThis website began as a project for my Data Science II class as a way to showcase some of the fun projects I was working on. Since then, it has grown as I’ve continued learning new statistical and data visualization techniques. Enjoy a glimpse into some of the data driven questions I’ve been able to explore!"
+    "text": "Welcome!\nI’m Mary Kreklow, a recent graduate of St. Olaf College with a B.A. in quantitative economics and concentrations in statistics & data science and international relations. I have been captivated by the world of statistics, particularly how we can use data to improve the lives of the communities around us.\nThis website began as a project for my Data Science II class as a way to showcase some of the fun projects I was working on. Since then, it has grown as I’ve continued learning new statistical and data visualization techniques. Enjoy a glimpse into some of the data-driven questions I’ve been able to explore!"
   },
   {
     "objectID": "us_states.html",
@@ -276,21 +276,31 @@
   {
     "objectID": "ECON385.html",
     "href": "ECON385.html",
-    "title": "Econometrics: Time Series and Forecasting - Final Paper",
+    "title": "Econometrics: Time Series and Forecasting",
     "section": "",
     "text": "Download PDF file.",
     "crumbs": [
-      "Econometrics: Time Series and Forecasting - Final Paper"
+      "Econometrics: Time Series and Forecasting"
     ]
   },
   {
     "objectID": "ECON372.html",
     "href": "ECON372.html",
-    "title": "Behavioral Economics - Research Paper",
+    "title": "Behavioral Economics",
     "section": "",
     "text": "Download PDF file.",
     "crumbs": [
-      "Behavioral Economics - Research Paper"
+      "Behavioral Economics"
+    ]
+  },
+  {
+    "objectID": "ECON376.html",
+    "href": "ECON376.html",
+    "title": "Labor Economics & Employment Relations",
+    "section": "",
+    "text": "Download PDF file.",
+    "crumbs": [
+      "Labor Economics & Employment Relations"
     ]
   }
 ]

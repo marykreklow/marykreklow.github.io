@@ -22,7 +22,7 @@ about:
 
 I’m Mary Kreklow, a recent graduate of St. Olaf College with a B.A. in quantitative economics and concentrations in statistics & data science and international relations. I have been captivated by the world of statistics, particularly how we can use data to improve the lives of the communities around us.
 
-This website began as a project for my Data Science II class as a way to showcase some of the fun projects I was working on. Since then, it has grown as I’ve continued learning new statistical and data visualization techniques. Enjoy a glimpse into some of the data driven questions I’ve been able to explore!
+This website began as a project for my Data Science II class as a way to showcase some of the fun projects I was working on. Since then, it has grown as I’ve continued learning new statistical and data visualization techniques. Enjoy a glimpse into some of the data-driven questions I’ve been able to explore!
 :::
 
 ### Get in Touch

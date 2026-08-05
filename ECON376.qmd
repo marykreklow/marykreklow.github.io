@@ -1,0 +1,7 @@
+---
+title: "Labor Economics & Employment Relations"
+resources:
+  - ECON376Paper.pdf
+---
+
+{{< pdf ECON376Paper.pdf width=100% height=800 >}}

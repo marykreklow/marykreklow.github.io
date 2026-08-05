@@ -1,9 +1,7 @@
 ---
-title: "Behavioral Economics - Research Paper"
+title: "Behavioral Economics"
 resources:
   - ECON372.pdf
 ---
-
-![]()
 
 {{< pdf ECON372.pdf width=100% height=800 >}}
