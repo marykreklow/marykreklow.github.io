@@ -8,9 +8,9 @@ about:
   image-shape: round
   links:
     - icon: envelope
-      href: mailto:kreklo1@stolaf.edu
+      href: mailto:mlkreklow@gmail.com
     - icon: github
-      href: https://github.com/kreklo1
+      href: https://github.com/marykreklow
     - icon: linkedin
       href: https://www.linkedin.com/in/mary-kreklow/
 ---
