@@ -1,6 +1,9 @@
 ---
-title: "ECON372"
-format: html
+title: "Behavioral Economics - Research Paper"
+resources:
+  - ECON372.pdf
 ---
 
-![](images/ECON 372 Final Paper-01.docx)
+![]()
+
+{{< pdf ECON372.pdf width=100% height=800 >}}

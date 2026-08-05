@@ -8,24 +8,27 @@ editor_options:
 ```{r, include=FALSE}
 library(readr)
 library(tidyverse)
-rat_pop <- read_csv("~/RStudio/rat-population-by-state-2024.csv")
-state_pop <-read_csv("~/RStudio/state-population-table.csv")
+rat_pop <- read_csv("rat-population-by-state-2026.csv")
+state_pop <- read_csv("state-pop.csv")
 ```
 
 ```{r, include=FALSE}
 library(maps)
 us_states <- map_data("state")
 
+state_pop <- state_pop |>
+  mutate(State = str_remove(State, "^\\."))
+
 state_population<-state_pop|>
-  mutate(state=str_to_lower(state))|>
-  select(state, pop2024)
+  mutate(state=str_to_lower(State))|>
+  select(state, Population)
 ```
 
 ```{r, echo=FALSE, message=FALSE}
 rat_pop |>
   mutate(state=str_to_lower(state))|>
   right_join(us_states, by = c("state" = "region"))|>left_join(state_population)|>
-  mutate(prop_rat=`RatPopulation(millions)`/(pop2024/1000000))|>
+  mutate(prop_rat=RatPopulation_2022/Population)|>
   ggplot(mapping = aes(x=long, y=lat, group=group))+
   geom_polygon(aes(fill=prop_rat), color="black")+
   coord_map()+

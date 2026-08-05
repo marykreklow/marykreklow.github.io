@@ -1,5 +1,5 @@
 ---
-title: "My Document"
+title: "Econometrics: Time Series and Forecasting - Final Paper"
 resources:
   - ECON385Paper.pdf
 ---
