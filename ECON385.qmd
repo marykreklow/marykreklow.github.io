@@ -1,0 +1,7 @@
+---
+title: "My Document"
+resources:
+  - ECON385Paper.pdf
+---
+
+{{< pdf ECON385Paper.pdf width=100% height=800 >}}

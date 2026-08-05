@@ -20,15 +20,15 @@ about:
 
 *Welcome!*
 
-I'm Mary Kreklow, a senior at St. Olaf College, studying quantitative economics with concentrations in statistics & data science and international relations. My academic journey is driven by a commitment to understanding complex systems - whether that’s through data analysis, policy evaluation, or modeling solutions for real-world issues. Outside the classroom, I lead as a SOAR Peer Leader and Senior Admissions Fellow, and I’m actively involved in music ensembles and campus organizations. With a passion for helping others and finding good in the world, I’m excited to work on projects that reflect my dedication to bridging gaps and uplifting communities.
+I’m Mary Kreklow, a recent graduate of St. Olaf College with a B.A. in quantitative economics and concentrations in statistics & data science and international relations. I have been captivated by the world of statistics, particularly how we can use data to improve the lives of the communities around us.
 
-Here, you’ll find a collection of projects that showcase my curiosity and creativity, offering a playful take on data-driven insights!
+This website began as a project for my Data Science II class as a way to showcase some of the fun projects I was working on. Since then, it has grown as I’ve continued learning new statistical and data visualization techniques. Enjoy a glimpse into some of the data driven questions I’ve been able to explore!
 :::
 
 ### Get in Touch
 
-**Email**: <a href='mailto:kreklo1@stolaf.edu'>kreklo1\@stolaf.edu</a>
+**Email**: <a href='mailto:mlkreklow@gmail.edu'>mlkreklow\@gmail.edu</a>
 
-**Hometown**: Tigerton, WI
+**Location**: Burnsville, MN
 
 **Phone**: 715-250-3816

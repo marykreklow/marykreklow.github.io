@@ -15,8 +15,7 @@ website:
         text: SDS 272
       - file: ChallengeOne.qmd
         text: SDS 341
-      - file: Econ200.qmd
-        text: Econ 200
+      - sidebar:ECON
 
 
   sidebar:
@@ -28,11 +27,15 @@ website:
         - rtip.qmd
         - mini_project2.qmd
         - RATATOUILLE.qmd
+    - id: ECON
+      title: "Econ"
+      contents:
+        - ECON385.qmd
 
 
   page-footer:
     left: |
-      &copy; Mary Kreklow, 2024<br>
+      &copy; Mary Kreklow, 2026<br>
       All content licensed under <i class='bi-badge-cc'></i>
       [(CC BY-NC-SA 4.0)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
     right: |

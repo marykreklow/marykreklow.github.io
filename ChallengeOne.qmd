@@ -1,5 +1,5 @@
 ---
-title: "Final Project - Group B_1_2"
+title: "Predicting Hotel Booking Cancellations"
 author: "Meghan, Maya, and Mary"
 output:
   pdf_document: default
@@ -49,8 +49,7 @@ The hotel dataset was created using data from the hotels’ Property Management 
 
 **Cleaning Steps**
 
-We performed several data cleaning steps to improve our models and analysis. For example, we combined the "babies" and "children" columns into a single "children" column and created a "RoomChange" dummy variable to indicate where the requested room differed from the assigned room. We removed variables such as MarketSegment, ArrivalDateYear, ArrivalDateMonth, and ArrivalDateDayOfMonth because their information could be derived from other columns. Similarly, we excluded Country, Agent, and Company due to the large number of specific levels that would not contribute meaningfully to the models. Lastly, we removed columns that contained a lot of missing values. 
-
+We performed several data cleaning steps to improve our models and analysis. For example, we combined the "babies" and "children" columns into a single "children" column and created a "RoomChange" dummy variable to indicate where the requested room differed from the assigned room. We removed variables such as MarketSegment, ArrivalDateYear, ArrivalDateMonth, and ArrivalDateDayOfMonth because their information could be derived from other columns. Similarly, we excluded Country, Agent, and Company due to the large number of specific levels that would not contribute meaningfully to the models. Lastly, we removed columns that contained a lot of missing values.
 
 ```{r, echo=FALSE}
 hotel<-hotel|>
@@ -64,6 +63,7 @@ hotels<-hotel |>
   filter(DistributionChannel!="Undefined")
 #Takes out variables we don't want
 ```
+
 **Question:** Can we predict whether a reservation will be cancelled based on booking and guest characteristics?
 
 ```{r}
@@ -131,14 +131,12 @@ hotels|>
   labs(title="Distribution of Canceled vs. Not Canceled Reservations", x = "Cancellation Status (0=Not Cancelled, 1=Cancelled)", y = "Count")
 ```
 
-
 ```{r, out.width="50%", out.height="50%", fig.align = "center", fig.cap="We are looking at if lead time (time between booking and check-in) makes a difference to potentially inform our employers if they should set limits to when they open booking. As we can see, there is a wide range of values, and our histogram is extremely right skewed. Most lead times are relatively short, with bookings made closer to the reservation date. However, there are a few notable outliers where reservations were made more than a year in advance."}
 
 ggplot(hotels, aes(x=LeadTime))+
   geom_histogram()+
   labs(title = "Distribution of Time between Booking Date and Check-in", x="Time between Booking and Reservation Date (days)", y="Frequency")
 ```
-
 
 ```{r, out.width="50%", fig.align = "center", out.height="50%", fig.cap="This graph shows how previous cancellations and lead time are correlated with cancellation status. We can see that when the number of previous cancellations is 0, the majority of reservations are not cancelled. However, for higher values of previous cancellations, cancellations become much more common. There does not seem to be strong correlations between cancellation status and lead time, however we do see that all the bookings made more than 500 days in advance were not cancelled"}
 
@@ -147,13 +145,11 @@ ggplot(hotels, aes(x = LeadTime, y = PreviousCancellations, color = factor(IsCan
   labs(title = "Lead Time vs. Previous Cancellations", x = "Lead Time", y = "Previous Cancellations", color = "Cancellation Status")
 ```
 
-
 ```{r, out.width="50%", out.height="50%", fig.cap="These boxplots show us that the average lead time for cancelled reservations is higher than that for not-cancelled reservations. This could have to do with the large influx of reservations with little to no lead time that we saw in the histogram, so if the hotel allows same-day booking those bookings would almost definitely not be cancelled. This graph is interesting and relevant because bookings that occur last minute or close to their time are cancelled less than those further in advance.", fig.align = "center"}
 ggplot(hotels, aes(x = factor(IsCanceled), y = LeadTime)) +
   geom_boxplot()+
   labs(title="Lead time by Cancellation Status" ,x = "Cancellation Status", y = "Days between Booking and Arrival")
 ```
-
 
 ```{r, out.width="50%", out.height="50%", fig.cap="We can also look into the booking channel. We see that the most cancellations are coming from travel agents/tour operators. This makes sense because they often book in large quantities and might also make provisional bookings for clients who are not yet committed. Furthermore, people are working through a third party which might be easier to cancel than directly through the hotel.", fig.align = "center"}
 
@@ -162,8 +158,6 @@ ggplot(hotels, aes(x = DistributionChannel, fill = factor(IsCanceled))) +
   labs(title="Cancellations by Booking Distribution Channel", x = "Distribution Channel", y = "Count", fill = "Cancellation Status")
 hotel_sample<-sample_n(hotels, 10000)
 ```
-
-
 
 ```{r, include=FALSE, echo=FALSE, fig.cap="This graph shows the distribution of time stays versus cancellations. The graph is not super informative because they are similar."}
 ggplot(hotels, aes(x = StaysInWeekNights, y = StaysInWeekendNights, color = as.factor(IsCanceled))) +
@@ -265,10 +259,9 @@ autoplot(conf_matrix, type = "heatmap")
 grid.arrange(importance, rocc, nrow=1)
 ```
 
-
 ## Tree Model
 
-For this model, we built a tree and optimized it using bootstrapping, resulting in a final tree with a depth of 15. We used the same recipe as before to ensure that the skewed dataset was being accounted for. This yields about an 78.6% accuracy rate, which is quite a bit better than our lasso model. We chose to optimize using roc_auc because of the imbalanced nature of our dataset, as this metric takes into account both false positives and false negatives. 
+For this model, we built a tree and optimized it using bootstrapping, resulting in a final tree with a depth of 15. We used the same recipe as before to ensure that the skewed dataset was being accounted for. This yields about an 78.6% accuracy rate, which is quite a bit better than our lasso model. We chose to optimize using roc_auc because of the imbalanced nature of our dataset, as this metric takes into account both false positives and false negatives.
 
 ```{r, out.height="50%", out.width="50%"}
 hotel_model <- decision_tree(
@@ -331,17 +324,15 @@ hotel_predictions |>
   
 ```
 
-
 ```{r, out.width="50%", out.height="50%", fig.cap="This model has 3 of the same 5 most important variables, room change, required car parking spaces, and customer type, meaning that these most likely have a somewhat strong relationship with cancellations. The other 2 important variables found from the tree model that were not identified as important in the lasso model are lead time and transient-party customer type. Lead time has a positive relationship with cancellations, while transient-party customers have a negative relationship with cancellations."}
 
 grid.arrange(important, roc_tbl, nrow=1)
 
 ```
 
-
 ## Forests
 
-Our last model was a random forest, which uses multiple decision trees to optimize accuracy and prevent overfitting. 
+Our last model was a random forest, which uses multiple decision trees to optimize accuracy and prevent overfitting.
 
 ```{r}
 library(ranger)
@@ -363,7 +354,6 @@ acccc<-augment(hotel_forest_model, hotel_test) |>
 kable(acccc)
 ```
 
-
 ```{r, out.width="50%", out.height="50%", fig.cap="Using a random forest, we found a higher accuracy than our other models. The confusion matrix shows improved findings for preventing both type I and II errors. It predicts true cancellations correctly about 75.5% of the time and true non cancellations correctly about 88.4% of the time."}
 
 augment(hotel_forest_model, hotel_test) |>
@@ -378,17 +368,12 @@ roc_tbl <- augment(hotel_forest_model, new_data = hotel_test) |>
 rocc<-autoplot(roc_tbl)
 ```
 
-
 ```{r, out.height="50%", out.width="50%", fig.cap="Three of the top-five important variables seen in the other models, lead time, car parking spaces, and room change, were also here, and this model also includes ADR (average daily revenue of the hotel) and arrival date week (what time of year). ADR has a positive relationship with cancellations, and arrival date week has increased cancellations during the summer/early fall as opposed to other times of the year"}
 grid.arrange(importante, rocc, nrow=1)
 ```
-
-
 
 ## Conclusion
 
 In conclusion, we found that we can predict with about 86% accuracy whether or not someone will cancel their hotel reservation based on customer characteristics and booking history. Figures summarizing the fit of each of the models and their variable importance are provided and described appropriately above. Some limitations to our finding are that all of our data is from Portugal, meaning that these trends may not be prevalent to other hotels around the world and our scope is limited. Many of our variables are also not normally distributed and are highly skewed, which can affect our models. We did try to combat this, but it is still important to keep in mind.
 
 We hope that this modeling could be useful to hotels. Although it is currently limited to select hotels in Portugal, further research could help expand the scope. Ideally, these models could be very helpful for hotels around the world in predicting cancellations based on consumer and reservation characteristics.
-
-
