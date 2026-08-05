@@ -23,6 +23,7 @@ website:
       title: "MSCS 264"
       contents:
         - us_states.qmd
+        - wi_gerrymandering.qmd
         - rtip.qmd
         - mini_project2.qmd
         - RATATOUILLE.qmd
