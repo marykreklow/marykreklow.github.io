@@ -83,7 +83,7 @@ The above graph is a sentiment analysis of all of the words in Ratatouille. To f
 Below we see a table with the 10 most used words in Ratatouille. To do this, I removed the stop words (common words that generally don't hold significance like "the") from the data and I ranked the leftover words by amount used. Unsurprisingly, we see that 3 of the words have to do with food, as it is a food movie. We also see that names/nicknames come up a lot, with Remy, Gusteau, Linguini and dad all making appearances. Rat is also fairly expected since the whole plot of the movie is about a rat. Somewhat surprising, however, is the word hey. I would think that it would be considered a stop word, however the set of stop words I used did not include it.
 
 ```{r word_table, echo=FALSE, message=FALSE, warning=FALSE}
-
+conflicted::conflicts_prefer(dplyr::count)
 ratatouille<-ratatouille|>
   mutate(word=str_replace(word, "'s", ""))
 
